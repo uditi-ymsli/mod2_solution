@@ -1,0 +1,107 @@
+/* Основные стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Comic Sans MS, sans-serif;
+}
+
+/* Контейнер для страницы */
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Стили заголовка */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #333;
+}
+
+/* Стили для секций */
+.section {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: lightgrey; /* Общий цвет фона для всех секций */
+    color: black;
+}
+
+/* Цвета фона для каждой секции */
+.section1 {
+    background-color: lightgrey; /* Цвет для первой секции - светло-красный */
+}
+
+.section2 {
+    background-color: lightgrey; /* Цвет для второй секции - светло-синий */
+}
+
+.section3 {
+    background-color: lightgrey; /* Цвет для третьей секции - светло-зеленый */
+}
+
+/* Цвета для заголовков каждой секции */
+.section-title {
+    position: absolute;
+    top: -16px;
+    right: -1px;
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.section1 .section-title {
+    background-color: red; /* Темно-красный */
+    color: white;
+}
+
+.section2 .section-title {
+    background-color: blue; /* Темно-синий */
+    color: white;
+}
+
+.section3 .section-title {
+    background-color: green; /* Темно-зеленый */
+    color: white;
+}
+
+/* Адаптивный дизайн: Десктоп */
+@media (min-width: 992px) {
+    .section {
+        float: left;
+        width: 30%; /* Каждая секция занимает 30% ширины экрана */
+    }
+}
+
+/* Адаптивный дизайн: Планшет */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 45%; /* Две секции занимают 45% ширины */
+        float: left;
+    }
+
+    .section2 {
+        clear: left; /* Вторая секция начинается с новой строки */
+    }
+
+    .section3 {
+        width: 95%; /* Третья секция занимает всю ширину строки */
+        clear: left;
+    }
+}
+
+/* Адаптивный дизайн: Мобильные устройства */
+@media (max-width: 767px) {
+    .section {
+        width: 95%;
+        margin: 10px auto;
+        float: none;
+    }
+}
